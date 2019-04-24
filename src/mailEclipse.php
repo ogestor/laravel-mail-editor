@@ -4,7 +4,7 @@ namespace qoraiche\mailEclipse;
 
 use ErrorException;
 use Illuminate\Container\Container;
-use Illuminate\Database\Eloquent\Factory as EloquentFactory;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Mail\Markdown;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Artisan;
