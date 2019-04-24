@@ -7,8 +7,8 @@
 </h2>
 
 <p align="center">
-<a href="https://packagist.org/packages/qoraiche/laravel-mail-editor" alt="sponsors on Open Collective"><img src="https://poser.pugx.org/qoraiche/laravel-mail-editor/v/stable" /></a> <a href="https://packagist.org/packages/qoraiche/laravel-mail-editor" alt="Sponsors on Open Collective"><img src="https://poser.pugx.org/qoraiche/laravel-mail-editor/license" /></a> 
-<a href="https://packagist.org/packages/qoraiche/laravel-mail-editor" alt="Sponsors on Open Collective"><img src="https://poser.pugx.org/qoraiche/laravel-mail-editor/downloads" /></a> 
+<a href="https://packagist.org/packages/ogestor/laravel-mail-editor" alt="sponsors on Open Collective"><img src="https://poser.pugx.org/ogestor/laravel-mail-editor/v/stable" /></a> <a href="https://packagist.org/packages/ogestor/laravel-mail-editor" alt="Sponsors on Open Collective"><img src="https://poser.pugx.org/ogestor/laravel-mail-editor/license" /></a> 
+<a href="https://packagist.org/packages/ogestor/laravel-mail-editor" alt="Sponsors on Open Collective"><img src="https://poser.pugx.org/ogestor/laravel-mail-editor/downloads" /></a> 
 </p>
 <br/><br/>
 
@@ -36,7 +36,7 @@ Please note that this package is still under active development. We encourage ev
 Via Composer
 
 ``` bash
-$ composer require qoraiche/laravel-mail-editor
+$ composer require ogestor/laravel-mail-editor
 ```
 
 The package will automatically register itself.
@@ -44,7 +44,7 @@ The package will automatically register itself.
 Publish configuration file and public assets:
 
 ``` bash
-php artisan vendor:publish --provider="qoraiche\mailEclipse\mailEclipseServiceProvider"
+php artisan vendor:publish --provider="ogestor\mailEclipse\mailEclipseServiceProvider"
 ```
 
 ## Usage
@@ -60,10 +60,6 @@ After setting up the package as described above, you can now access the applicat
 
 Please see the [changelog](changelog.md) for more information on what has changed recently.
 
-## Security
-
-If you discover any security related issues, please email author email [qoraicheofficiel@hotmail.com](mailto:qoraicheofficiel@hotmail.com) instead of using the issue tracker.
-
 ## License
 
 MIT license. Please see the [license file](LICENSE) for more information.
@@ -76,25 +72,3 @@ MIT license. Please see the [license file](LICENSE) for more information.
 
 ![maileclipse-templates-create](https://i.imgur.com/8OQrEIS.png)
 
-## TODO
-
-__Contributions are welcome__
-
-* Frontend enhancement (jquery to vue.js).
-* Add more email templates (HTML/Markdown).
-* Expand documentation pages.
-
-## Donate :heart:
-
-If you benefit from and/or like using MailEclipse then please help drive the future development of the project by 
-
-* [donating today](https://www.paypal.me/streamaps)!.
-* Star the project :star:.
-
-### Donors list:
-
-1. **Snapt Systems Ltd** - (100,00 $ USD) - `Being used by one of our teams at Snapt!` - 11 April 2019
-2. **Corr Ex** - (2,00 $ USD) - 28 March 2019
-3. **WebArt Design** - (10,00 $ USD) - `Donation made with love by BuiltByPanda. com from Australia who support developers and their excellent work` - 28 March 2019
-4. **Flavius Borlovan** (6,99 $ USD) - `#teamcookie says HELLOO 🥳😉 Thanks for this really helpful Package (MailEclipse) bro. 😉💪🏽` - 12 March 2019
-5. **Maik Kasper** - (6,99 $ USD) - `We {teamcookie:github. com/flavius-constantin} 💥 love to support good developers and their awesome work! 🌪🔥` - 13 March 2019
