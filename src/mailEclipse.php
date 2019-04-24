@@ -624,10 +624,6 @@ class mailEclipse
 
             $params = $reflection->getConstructor()->getParameters();
 
-            DB::beginTransaction();
-
-            $eloquentFactory = app(EloquentFactory::class);
-
             $args = collect($params)->map(function ($param) {
 
                 if ($param->getType() !== null) {
@@ -661,18 +657,17 @@ class mailEclipse
 
             foreach ($args->all() as $arg) {
 
-                $factoryStates = [];
-
                 if (is_array($arg)) {
 
                     if (isset($arg['is_instance'])) {
+                        $modelInstance = app()->make($arg['instance']);
 
-                        if (isset($eloquentFactory[$arg['instance']])) {
-
-                            $filteredparams[] = factory($arg['instance'])->states($factoryStates)->create();
-
+                        if( $modelInstance instanceof Collection ) {
+                            $filteredparams[] = $modelInstance->all();
+                        } else if( $modelInstance instanceof Model ) {
+                            $filteredparams[] = $modelInstance->first();
                         } else {
-                            $filteredparams[] = app($arg['instance']);
+                            $filteredparams[] = $modelInstance;
                         }
 
                     } elseif (isset($arg['is_array'])) {
@@ -701,8 +696,6 @@ class mailEclipse
                 return $foo;
 
             }
-
-            DB::rollBack();
         }
 
     }
