@@ -664,7 +664,7 @@ class mailEclipse
 
                         if( $modelInstance instanceof Collection ) {
                             $filteredparams[] = $modelInstance->all();
-                        } else if( $modelInstance instanceof Model ) {
+                        } else if( is_subclass_of($modelInstance, Model::class) ) {
                             $filteredparams[] = $modelInstance->first();
                         } else {
                             $filteredparams[] = $modelInstance;
